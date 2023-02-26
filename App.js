@@ -11,12 +11,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View>
         <Text style={styles.mainTitle}>Lottó szám generátor</Text>
         <Pressable onPress={handlePress} style={styles.generatorBtn}>
           <Text style={styles.generatorBtnTxt}>Generálás</Text>
         </Pressable>
-      </View>
       <View style={styles.numbersContainer}></View>
     </View>
   );
@@ -24,17 +22,16 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 3,
     backgroundColor: "#93D14F",
     alignItems: "center",
     justifyContent: "center",
-  },
-  generatorContainer: {
-    
+    paddingTop: 30
   },
   mainTitle: {
     fontSize: 40,
     textAlign: "center",
+    backgroundColor: "#93D14F",
     color: "#ffffff",
     textTransform: "uppercase",
   },
@@ -55,5 +52,6 @@ const styles = StyleSheet.create({
   },
   numbersContainer: {
     flex: 3,
+    backgroundColor: "#93D14F",
   },
 });
