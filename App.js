@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { skandinavLotto} from "./components/randNums";
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { StyleSheet, Text, View, Pressable, Button } from "react-native";
 
 export default function App() {
   function handlePress() {
@@ -10,8 +10,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.mainTitle}>Lottó szám generátor</Text>
-      <Pressable style={styles.generatorBtn} onPress={handlePress()}>
-        <Text>Generálás</Text>
+      <Pressable onPress={handlePress} style={styles.generatorBtn}>
+        <Text>Press Me Too!</Text>
       </Pressable>
     </View>
   );
@@ -37,5 +37,6 @@ const styles = StyleSheet.create({
     width: "80%",
     padding: 15,
     textAlign: "center",
+    marginTop: 30
   },
 });
