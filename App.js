@@ -1,11 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from "react";
+import { skandinavLotto} from "./components/randNums";
+import { StyleSheet, Text, View, Pressable } from "react-native";
 
 export default function App() {
+  function handlePress() {
+    console.log("pressed");
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.mainTitle}>Lottó szám generátor</Text>
+      <Pressable style={styles.generatorBtn} onPress={handlePress()}>
+        <Text>Generálás</Text>
+      </Pressable>
     </View>
   );
 }
@@ -13,8 +20,22 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#93D14F",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  mainTitle: {
+    fontSize: 40,
+    textAlign: "center",
+    color: "#ffffff",
+    textTransform: "uppercase",
+  },
+  generatorBtn: {
+    backgroundColor: "#ffffff",
+    color: "#0000",
+    fontSize: 20,
+    width: "80%",
+    padding: 15,
+    textAlign: "center",
   },
 });
