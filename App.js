@@ -11,7 +11,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.mainTitle}>Lottó szám generátor</Text>
       <Pressable onPress={handlePress} style={styles.generatorBtn}>
-        <Text>Press Me Too!</Text>
+        <Text style={styles.generatorBtnTxt}>Generálás</Text>
       </Pressable>
     </View>
   );
@@ -31,12 +31,18 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
   generatorBtn: {
-    backgroundColor: "#ffffff",
     color: "#0000",
-    fontSize: 20,
+    backgroundColor: "#ffffff",
     width: "80%",
     padding: 15,
     textAlign: "center",
-    marginTop: 30
+    marginTop: 15,
+  },
+  generatorBtnTxt: {
+    fontSize: 20,
+    marginLeft: "auto",
+    marginRight: "auto",
+    textTransform: "uppercase",
+    letterSpacing: 3
   },
 });
